@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Shop Stock Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Computer Shop Stock Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#sales">Sales</a></li>
+            <li><a href="#reports">Reports</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to the Computer Shop Stock Management System</h2>
+            <p>Use the navigation menu to manage your shop's stock and sales.</p>
+        </section>
+        <section id="products">
+            <h2>Product Management</h2>
+            <form id="product-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price" name="product-price" required>
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" name="product-quantity" required>
+                <button type="submit">Add Product</button>
+            </form>
+            <div id="product-list">
+                <h3>Product List</h3>
+                <!-- Product items will be listed here -->
+            </div>
+        </section>
+        <section id="inventory">
+            <h2>Inventory Tracking</h2>
+            <!-- Inventory tracking details will be here -->
+        </section>
+        <section id="sales">
+            <h2>Sales Management</h2>
+            <!-- Sales management details will be here -->
+        </section>
+        <section id="reports">
+            <h2>Reports</h2>
+            <!-- Reports details will be here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Computer Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

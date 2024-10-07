@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html>
+	<title>REGISTRATION FORM</title>
+<head>
+<style>
+	h2  { color:#013220 ;}
+</style>
+<script>
+	function validation(myform)
+	{
+		var p=document.getElementById("demo");
+		var username=document.getElementById("fname").value;
+		var passwrd=document.getElementById("pass").value;
+		var mail=document.getElementById("myemail").value;
+		var email=/^[\w]+@[\w]+.[\w.]+$/  ///^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
+		var number=document.getElementById("phone").value;
+		var phone=/^[\d]{10}$/;
+		if(passwrd.length<7 || username.length==0)
+		{
+			window.alert("Password must be greater than 7");
+		}
+		else if(!(number.match(phone)))
+		{
+			window.alert("Please enter the valid phone number");
+		}
+		else if(!(mail.match(email)))
+		{
+			window.alert("pleasefill the correct email or gmail id");
+		}
+		else
+		{
+			p.innerHTML = "THANK YOU";
+		}
+	}
+</script>
+<body>
+		
+		<body BGCOLOR="#fa8072">
+	    <form  name="myform" onSubmit="validation(this); return false;">
+			<center><P><h2>FORM REGISTRATION</h2></P></center>
+			<label for="fname">NAME AS IN SSLC CERTIFICATE:</label>
+			<input type="text" id="fname" name="fname"><br>
+			<label for="DOB">DOB:</label>
+			<input type="date" id="dob" name="dob"><br>
+			<label for="gender">GENDER:</label><br>
+			<label><input id="MALE" type="radio" name="shipping" value="MALE">Male</label>
+			<label><input id="FEMALE" type="radio" name="shipping" value="FEMALE">Female</label><br>
+			<label for="department">DEPARTMENT:</label><br>
+			<input id="cse" type="checkbox" name="cse" value="CSE">CSE</label><br>
+			<input id="ece" type="checkbox" name="ece" value="ECE">ECE</label><br>
+			<input id="it" type="checkbox" name="it" value="IT">IT</label><br>
+			<input id="aids" type="checkbox" name="aids" value="AIDS">AIDS</label><br>
+			<label for="domain">DOMAIN:</label><br>
+			<input id="Web Developer" type="checkbox" name="Web Developer">WEB DEVELOPER</label><br>
+			<input id="Software Developer" type="checkbox" name="Software Developer">SOFTWARE DEVELOPER</label><br>
+			<input id="Cloud Computing" type="checkbox" name="Cloud Computing">CLOUD COMPUTING</label><br>
+			<input id="Cryptography" type="checkbox" name="Cryptography">CRYPTOGRAPHY</label><br>
+			<input id="UI Design" type="checkbox" name="UI design">UI DESIGN</label><br>
+			<label for="phone">PHONE NUMBER:</label>
+			<input type="text" id="phone" name="phone"><br>
+			<label for="mail">GMAIL:</label>
+			<input type="text" id="myemail" name="email"><br>
+			<label for="lname">PASSWORD:</label>
+			<input type="password" id="pass" name="pass"><br>
+			<center><input type="submit"></center><BR>
+		</form>
+		<p id="demo"></p>
+</body>
+</head>
+</html>
